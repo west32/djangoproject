@@ -5,5 +5,6 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('room/<str:pk>/',views.room, name="room"),
     path('sztoki/', views.sztoki, name="sztoki"),
-    path('sztoki/tokyo/', views.tokyo, name="tokyo")
+    path('sztoki/tokyo/', views.tokyo, name="tokyo"),
+    path('create-room/', views.createRoom, name="create-room")
 ]
