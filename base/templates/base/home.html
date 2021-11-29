@@ -3,8 +3,14 @@
 {% block content %}
 <h1>HOME Template</h1>
 
-<div>
+<div class= "home=container">
 
+    <div>
+        <h3> Browse Topics </h3>
+        <hr>
+
+    </div>
+   
     <div>
 
         <a href="{% url 'create-room' %}">Create Room</a>
@@ -14,7 +20,7 @@
                 <h5>{{room.id}}-- <a href="{% url 'room' room.id %}"> {{room.name}}</a></h5>
                 <small>{{room.topic.name}}</small>
                 <a href="{% url 'update-room' room.id %}">Edit</a>
-                <a href="{& url 'delete-room' room.id &}"> Delete </a>
+                <a href="{% url 'delete-room' room.id %}"> Delete </a>
                 <hr>
             </div>
 
