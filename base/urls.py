@@ -7,5 +7,6 @@ urlpatterns = [
     path('sztoki/', views.sztoki, name="sztoki"),
     path('sztoki/tokyo/', views.tokyo, name="tokyo"),
     path('create-room/', views.createRoom, name="create-room"),
-    path('update-room/<str:pk>/', views.updateRoom, name="update-room")
+    path('update-room/<str:pk>/', views.updateRoom, name="update-room"),
+    path('delete-room/<str:pk>/', views.deleteRoom, name="delete-room"),
 ]
