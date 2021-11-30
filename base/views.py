@@ -5,7 +5,7 @@ from .forms import RoomForm
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib import  messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 # rooms= [
@@ -13,6 +13,10 @@ from django.contrib.auth import authenticate, login
 #     {'id':2, 'name':'Design with me !'},
 #     {'id':3, 'name':'Fronend Devs!'},
 # ]
+
+
+
+
 
 def loginPage(request):
 
@@ -35,6 +39,12 @@ def loginPage(request):
 
     context = {}
     return render(request, 'base/login_register.html', context)
+
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
+
+
 
 def home(request):
     q= request.GET.get('q') if request.GET.get('q') !=None else ''
