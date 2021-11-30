@@ -17,7 +17,8 @@ def home(request):
     rooms= Room.objects.filter(
         Q(topic__name__icontains=q) | 
         Q(name__icontains=q) |
-        Q(description__icontains=q)
+        Q(description__icontains=q) |
+        Q(host__username__icontains =q)
         )
     topics = Topic.objects.all()
     context= {'rooms': rooms,'topics': topics}
