@@ -20,4 +20,14 @@
     {% endfor %}
 </div>
 
+<div class="comment-form">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="body" placeholder="Write your message here..." />
+    
+
+    </form>
+
+</div>
+
 {% endblock content %}
